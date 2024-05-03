@@ -38,7 +38,7 @@ pub struct KeyedNotificationsProps<'a> {
     notifications: KeyedNotifications,
 }
 
-pub fn KeyedNotificationsProps<'a>(cx: Scope<'a, KeyedNotificationsProps<'a>>) -> Element {
+pub fn KeyedNotificationBox<'a>(cx: Scope<'a, KeyedNotificationsProps<'a>>) -> Element {
     let notifications = cx.props.notifications.messages().map(|msg| {
         rsx!{ li { "{msg}" }}
     });
